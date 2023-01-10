@@ -3,7 +3,6 @@ import { redirect, type Handle } from "@sveltejs/kit";
 import PocketBase from "pocketbase";
 
 export const handle = (async ({ event, resolve }) => {
-    console.info("Checking auth");
     event.locals.pb = new PocketBase("http://127.0.0.1:8090");
 
     // load the store data from the request cookie string
